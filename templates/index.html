@@ -1,16 +1,54 @@
-<!DOCTYPE html>
-
-
 <html>
 
 
 	<head>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link href="../static/output.css" rel="stylesheet">
+		<link href="../static/style.css" rel="stylesheet">
+		
+		<script src="../static/index.js"></script>
+
+		<script>
+			
+			$(document).ready(function () {
+					
+				on_send_click();
+				on_enter_click();
+
+			})
+
+
+		</script>
+		
+
+
 	</head>
 
 	<body>
+		<h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Chat with Sid's AI bot</h1>
+	
 
-		<h2>This is index.html</h2>
+		<div id="main-div" class="items-center justify-center py-8">
+			
+			<div>
+				
+				<hr>
+				<p>AI: This is an AI. Please enter message below</p>
+				<hr>
 
+			</div>
+
+		</div>
+
+		<div class="" id="input-div">
+			
+			<textarea id="input-box" rows="2" columns="10" class="border-black"></textarea>
+
+				
+			<button id="send-button" class="bg-gray-400">send</button>
+
+		</div>
+	
 	</body>
 
 
