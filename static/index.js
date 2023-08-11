@@ -1,3 +1,5 @@
+
+/*
 function on_send_click() {
 
 	$("#send-button")[0].onclick = function (e) {
@@ -5,6 +7,7 @@ function on_send_click() {
 	}
 
 }
+*/
 
 function on_enter_click() {
 

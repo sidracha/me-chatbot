@@ -3,7 +3,7 @@ from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-response = "This is the AI response"
+response = "This is the AI response."
 
 
 @app.route("/")
