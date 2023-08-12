@@ -17,7 +17,12 @@ However, the chatbot is really afwul and does not understand what it is saying o
 The data was in alpaca format: 
 
 .. code-block::text 
-{"Instruction": "Respond to this message sent by a human",
+{
+
+ "Instruction": "Respond to this message sent by a human",
+ 
  "Input": <message I responded to>,
+ 
  "Output": <my message>
+
 }
