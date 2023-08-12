@@ -1,7 +1,7 @@
 me-chatbot
 ==========
 
-http://sidsail.ddns.net
+http://sidsail.ddns.net:3000
 
 I fine-tuned a llama 7B model with ~25,000 of my messages that I scraped from discord.
 
