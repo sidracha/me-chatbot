@@ -86,6 +86,8 @@ function send_message() {
 			textarea.prop("selectionStart", 0);
 			textarea.prop("selectionEnd", 0);
 			textarea.focus();
+			window.scrollTo(0, document.body.scrollHeight);
+
 
 		})
 
