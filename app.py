@@ -11,13 +11,14 @@ from peft.tuners.lora import LoraLayer
 #generation configs
 max_new_tokens = 32
 top_p = 0.9
-temperature = 0.9
+temperature = 0.7
 
 #Base model
-model_name_or_path = "huggyllama/llama-7b"
+#model_name_or_path = "huggyllama/llama-7b"
+model_name_or_path = "../qlora/merged_model2"
 
 #adapter
-adapter_path = "./models/checkpoint-9750"
+#adapter_path = "./models/checkpoint-10000"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = AutoModelForCausalLM.from_pretrained(
@@ -33,13 +34,13 @@ model = AutoModelForCausalLM.from_pretrained(
      )
 )
 
-model = PeftModel.from_pretrained(model, adapter_path)
+#model = PeftModel.from_pretrained(model, adapter_path)
 
 prompt = (
     "This is a conversation between a human and an AI assistant. "
-    "You the AI assistant will reply to the messages of the human in a helpful way. "
+    "The AI assistant will respond to this message sent by a human in a helpful manner. "
     "### Human: {} "
-    "### AI Assistant: "
+    "### AI: "
 )
 
 def generate(model, inpt, max_new_tokens=max_new_tokens, top_p=top_p, temperature=temperature):
@@ -79,8 +80,19 @@ def handle_chat():
     response = generate(model, inpt)
 
     response = response[len(inpt): len(response)]
+    
+    resp_list = response.split(" ")
+    
+    response = ""
+
+    for ele in resp_list:
+        if (ele == "###"):
+            break
+        response += ele
+        response += " "
+    response = response.strip()
 
     return jsonify({"response": response})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000)
+    app.run(host="0.0.0.0", port=3200)
