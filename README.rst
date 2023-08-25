@@ -3,7 +3,7 @@ me-chatbot
 
 http://sidsail.ddns.net:3200
 
-I fine-tuned a llama 7B model with ~25,000 of my messages that I scraped from discord.
+I fine-tuned the huggyllama/llama-7b model with ~25,000 of my messages that I scraped from discord.
 
 Using qlora 4-bit quantization for fine tuning and inference
 
