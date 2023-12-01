@@ -1,7 +1,7 @@
 me-chatbot
 ==========
 
-http://sidsail.ddns.net:3200
+http://sidsail2.ddns.net:3200
 
 I fine-tuned the huggyllama/llama-7b model with ~25,000 of my messages that I scraped from discord.
 
